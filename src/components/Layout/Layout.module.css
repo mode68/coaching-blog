@@ -1,0 +1,21 @@
+.Layout {
+	font-family: 'Mukta';
+	height: 15%;
+	/* position: fixed; */
+}
+
+.Content {
+	margin: 10% 20% 4% 20%;
+}
+
+@media (max-width: 1000px) {
+	.Content {
+		margin: 15% 1% 1% 1%;
+	}
+}
+
+.PageName {
+	margin: 5% 0;
+	font-size: 25px;
+	font-weight: bold;
+}

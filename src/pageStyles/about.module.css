@@ -1,0 +1,31 @@
+.MainPicture {
+	float: left;
+	max-width: 39%;
+	margin: 1% 1% 1% 0;
+}
+
+.MainPicture img {
+	width: 100%;
+	height: auto;
+}
+
+.PictureFooter {
+	font-size: x-large;
+}
+
+.Content {
+	float: right;
+	max-width: 58%;
+	margin: 1%;
+}
+
+@media (max-width: 600px) {
+	.MainPicture {
+		float: none;
+		max-width: 100%;
+	}
+	.Content {
+		max-width: 100%;
+		float: none;
+	}
+}

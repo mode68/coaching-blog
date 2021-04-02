@@ -1,0 +1,42 @@
+.NameRowElement {
+	display: inline-block;
+	width: 49%;
+}
+
+.NameRowElement input {
+	border-radius: 3px;
+	padding: 5px 10px 5px 10px;
+	width: 90%;
+	line-height: 300%;
+	border: 1px solid black;
+}
+
+.NameRowElement:first-child {
+	margin: 10px 1% 10px 0;
+}
+.NameRowElement:last-child {
+	margin: 10px 0 10px 1%;
+}
+
+.Input {
+	width: 95%;
+	line-height: 300%;
+	border-radius: 3px;
+	border: 1px solid black;
+	padding: 5px 10px 5px 10px;
+}
+
+.SendButton {
+	width: 97%;
+	background-color: white;
+	margin-top: 15px;
+	border-radius: 3px;
+	letter-spacing: 4px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.SendButton:hover {
+	cursor: pointer;
+	background-color: rgb(224, 224, 224);
+}

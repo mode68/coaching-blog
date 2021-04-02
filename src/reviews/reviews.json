@@ -1,0 +1,12 @@
+{
+    "review1": {
+        "reviewTitle": "Nanako Hirano, 21 year old student",
+        "gender": "female",
+        "reviewText": "I would recommend this to anyone!"
+    },
+    "review2": {
+        "reviewTitle": "Shinsuke Nakamura, 32 year old professional wrestler",
+        "gender": "male",
+        "reviewText": "After this course I was able to wrestle better than ever before, 10/10"
+    }
+}

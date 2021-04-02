@@ -1,0 +1,77 @@
+.Navigation {
+	/* background-image: linear-gradient(white, white); */
+	background-color: white;
+	opacity: 0.9;
+	height: auto;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	text-align: center;
+	padding: 20px;
+	min-width: 520px;
+	padding-top: 7%;
+	/* background-color: white;
+	opacity: 0.9;
+	display: block;
+	height: auto;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	padding: 20px;
+	min-width: 520px; */
+}
+
+.Link {
+	margin: auto;
+	text-align: center;
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	height: 100%;
+}
+
+.Link a {
+	margin: 20px;
+	text-decoration: none;
+	color: black;
+	opacity: 0.7;
+}
+
+.Link a:hover {
+	opacity: 1;
+}
+
+a.active {
+	opacity: 1;
+	border-bottom: 1px solid black;
+}
+
+.SocialMediaLinks {
+	top: 0;
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	z-index: 1;
+	padding: 4% 5px 0 5px;
+	/* bottom: 0;
+	width: 100%;
+	display: block;
+	position: absolute;
+	text-align: center;
+	margin-bottom: 45px;
+	z-index: 1;
+	padding: 0% 5px 0 5px; */
+}
+
+.SocialMediaLinks a {
+	margin: 0px 8px 0px 8px;
+	font-size: 160%;
+	color: black;
+	opacity: 0.5;
+}
+
+.SocialMediaLinks a:hover {
+	opacity: 1;
+}

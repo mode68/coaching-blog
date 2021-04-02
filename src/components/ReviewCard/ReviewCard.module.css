@@ -1,0 +1,25 @@
+.ReviewCard {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 20px;
+	margin-bottom: 15px;
+}
+
+.ReviewPicture {
+	height: auto;
+	width: 10%;
+	display: inline-block;
+	margin: 15px 15px 0 15px;
+}
+
+.ReviewTitle {
+	position: relative;
+	width: 85%;
+	font-size: larger;
+	margin: 10px 0 10px 0;
+}
+
+.Review {
+	display: inline-block;
+	width: 85%;
+	vertical-align: top;
+}
