@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../UI/Navigation/Navigation';
 import * as classes from './Layout.module.css';
 import '@fontsource/mukta';
 

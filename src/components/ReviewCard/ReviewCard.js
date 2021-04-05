@@ -10,7 +10,7 @@ const reviewCard = (props) => {
 			<img className={classes.ReviewPicture} src={picture} alt='ReviewPicture' />
 			<div className={classes.Review}>
 				<div className={classes.ReviewTitle}>{props.title}</div>
-				<div className={classes.ReviewText}>{props.text}</div>
+				<div>{props.text}</div>
 			</div>
 		</div>
 	);

@@ -15,6 +15,7 @@
 	position: relative;
 	width: 85%;
 	font-size: larger;
+	font-weight: bold;
 	margin: 10px 0 10px 0;
 }
 
@@ -22,4 +23,14 @@
 	display: inline-block;
 	width: 85%;
 	vertical-align: top;
+}
+
+@media (max-width: 600px) {
+	.Review {
+		width: 75%;
+		margin: 5px 0 5px 0;
+	}
+	.ReviewTitle {
+		width: 100%;
+	}
 }

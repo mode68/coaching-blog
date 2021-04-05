@@ -1,0 +1,30 @@
+.Input {
+	width: 95%;
+	line-height: 300%;
+	border-radius: 3px;
+	border: 1px solid black;
+	padding: 5px 10px 5px 10px;
+}
+
+.NameRowElement {
+	display: inline-block;
+	width: 49%;
+}
+
+.NameRowElement input {
+	border-radius: 3px;
+	padding: 5px 10px 5px 10px;
+	width: 90%;
+	line-height: 300%;
+}
+
+.NameRowElement:first-child {
+	margin: 10px 1% 10px 0;
+}
+.NameRowElement:last-child {
+	margin: 10px 0 10px 1%;
+}
+
+.Invalid {
+	border: 1px solid red;
+}
