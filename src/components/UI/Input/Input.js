@@ -5,7 +5,6 @@ const Input = (props) => {
 	let mountedClasses = [classes.Input];
 	if (!props.isValid && props.touched) {
 		mountedClasses.push(classes.Invalid);
-		console.log('mountedclasses: ', mountedClasses);
 	}
 	return (
 		<div className={props.nameRowElement ? classes.NameRowElement : null}>

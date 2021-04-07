@@ -3,6 +3,12 @@ module.exports = {
 		title: 'coaching-blog',
 	},
 	plugins: [
+		{
+			resolve: 'gatsby-plugin-page-transitions',
+			options: {
+				transitionTime: 500,
+			},
+		},
 		`gatsby-plugin-transition-link`,
 		'gatsby-plugin-image',
 		{

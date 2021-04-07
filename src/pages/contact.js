@@ -97,7 +97,6 @@ const Reviews = () => {
 		}
 		setContactForm(updatedForm);
 		setFormValidity(isFormValid);
-		console.log('new contact form: ', updatedForm);
 	};
 
 	const modalCloseHandler = () => {

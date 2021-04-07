@@ -4,8 +4,6 @@ import ReviewCard from '../components/ReviewCard/ReviewCard';
 import reviewData from '../reviews/reviews.json';
 
 const reviews = () => {
-	// const reviews = JSON.parse(reviewsJSON);
-	console.log(reviewData);
 	let reviews = Object.keys(reviewData).map((key) => {
 		return (
 			<ReviewCard
