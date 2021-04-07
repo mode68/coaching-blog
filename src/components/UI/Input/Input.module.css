@@ -1,5 +1,5 @@
 .Input {
-	width: 95%;
+	width: calc(100% - 20px);
 	line-height: 300%;
 	border-radius: 3px;
 	border: 1px solid black;
@@ -14,7 +14,7 @@
 .NameRowElement input {
 	border-radius: 3px;
 	padding: 5px 10px 5px 10px;
-	width: 90%;
+	width: calc(100% - 20px);
 	line-height: 300%;
 }
 

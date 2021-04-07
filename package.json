@@ -27,11 +27,13 @@
     "gatsby-plugin-image": "^1.1.2",
     "gatsby-plugin-react-helmet": "^4.1.0",
     "gatsby-plugin-sharp": "^3.1.2",
+    "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-source-filesystem": "^3.1.0",
     "gatsby-transformer-sharp": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-spring": "^9.0.0",
     "react-svg": "^12.1.0",
     "social-media-icons-react": "^1.1.2",
     "svg-path-bounds": "^1.0.1"

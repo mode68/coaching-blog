@@ -9,8 +9,10 @@ const Input = (props) => {
 	}
 	return (
 		<div className={props.nameRowElement ? classes.NameRowElement : null}>
-			<p>{props.title}</p>
-			{!props.isValid && props.touched ? <p style={{ color: 'red' }}>{props.errorMessage}</p> : null}
+			<p style={!props.isValid && props.touched ? { marginBottom: 0 } : null}>{props.title}</p>
+			{!props.isValid && props.touched ? (
+				<p style={{ color: 'red', margin: '0', fontSize: '14px' }}>{props.errorMessage}</p>
+			) : null}
 			{props.textarea ? (
 				<textarea
 					className={mountedClasses.join(' ')}

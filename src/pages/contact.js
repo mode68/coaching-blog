@@ -6,11 +6,14 @@ import Modal from '../components/UI/Modal/Modal';
 import Input from '../components/UI/Input/Input';
 import { updateObject, checkValidity } from '../shared/utility';
 import emailjs from 'emailjs-com';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Reviews = () => {
 	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState('');
 	const [formValidity, setFormValidity] = useState(false);
+	const [error, setError] = useState('');
+	const [emailSentResponse, setEmailSentResponse] = useState('');
 
 	const [contactForm, setContactForm] = useState({
 		firstName: {
@@ -54,7 +57,7 @@ const Reviews = () => {
 	const sendHandler = (event) => {
 		event.preventDefault();
 		if (!formValidity) {
-			console.log('form is not valid');
+			setError('Form is not valid. Pease make sure to fill all of the fields correctly.');
 			return;
 		}
 		setLoading(true);
@@ -73,6 +76,7 @@ const Reviews = () => {
 			)
 			.then((response) => {
 				setLoading(false);
+				setEmailSentResponse('Thank you for contacting!');
 			})
 			.catch((error) => {
 				setLoading(false);
@@ -98,6 +102,7 @@ const Reviews = () => {
 
 	const modalCloseHandler = () => {
 		setError('');
+		setEmailSentResponse('');
 	};
 
 	return (
@@ -107,8 +112,17 @@ const Reviews = () => {
 				<Spinner />
 			</Modal>
 			<Modal show={error !== ''} modalClosed={modalCloseHandler}>
+				<p style={{ textAlign: 'center', color: 'red' }}>
+					<FontAwesomeIcon icon={faExclamationCircle} size='3x' />
+				</p>
 				<p style={{ textAlign: 'center', fontSize: '22px' }}>Something went wrong sending the message!</p>
 				<p style={{ textAlign: 'center' }}>{error}</p>
+			</Modal>
+			<Modal show={emailSentResponse !== ''} modalClosed={modalCloseHandler}>
+				<p style={{ textAlign: 'center', color: 'green' }}>
+					<FontAwesomeIcon icon={faCheckCircle} size='3x' />
+				</p>
+				<p style={{ textAlign: 'center', fontSize: '22px' }}>{emailSentResponse}</p>
 			</Modal>
 			<p>For more inquiries or information, please contact me through social media or here, via email.</p>
 			<form>
