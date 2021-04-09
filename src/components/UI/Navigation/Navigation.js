@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faFacebook, faInstagram, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import TransitionLink from 'gatsby-plugin-transition-link';
 import { animated, useTransition } from 'react-spring';
 
 const Navigation = () => {
@@ -81,7 +80,7 @@ const Navigation = () => {
 				{menuLinksElement}
 			</div>
 			<div className={classes.SideNavigationButton}>
-				<div className={classes.Title}>Coach Nano</div>
+				<div className={classes.Title}>CoacHirano</div>
 				<div className={classes.Button} onClick={mobileMenuClickHandler}>
 					<FontAwesomeIcon icon={faBars} />
 				</div>

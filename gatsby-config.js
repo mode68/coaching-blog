@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: 'coaching-blog',
+		title: 'Nano Coaching',
 	},
 	plugins: [
 		{
@@ -9,7 +9,9 @@ module.exports = {
 				transitionTime: 500,
 			},
 		},
-		`gatsby-plugin-transition-link`,
+		{
+			resolve: `gatsby-plugin-transition-link`,
+		},
 		'gatsby-plugin-image',
 		{
 			resolve: 'gatsby-plugin-google-analytics',

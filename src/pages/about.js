@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
-import mainPicture from '../images/about_img.jpg';
+import mainPicture from '../images/about_img1.jpg';
 import * as classes from '../pageStyles/about.module.css';
 
 const about = () => (
@@ -9,11 +9,12 @@ const about = () => (
 			<div className={classes.MainPicture}>
 				<img src={mainPicture} alt='MainAboutPicture' />
 				<div className={classes.PictureFooter}>
-					Picture footer: he looks very wise in this picture, looking into the distance
+					Picture footer: it looks like she loves eggs, and it's true. She will love you if you're an onsen
+					egg or cod roe
 				</div>
 			</div>
 			<div className={classes.Content}>
-				<p>Look at this cute doggie, so cute.</p>
+				<p>Look at this cute potato, so cute.</p>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum sapien nisi, eu
 					rhoncus eros porttitor sit amet. Integer sed tristique ante, ut lobortis ante. Maecenas accumsan
