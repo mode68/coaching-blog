@@ -33,8 +33,10 @@ const Layout = (props) => {
 									transitionStyles={{
 										entering: { opacity: '0' },
 										entered: { opacity: '1' },
-										exiting: { opacity: '0' },
+										exiting: { opacity: '1' },
+										exited: { opacity: '0' },
 									}}
+									transitionTime={1000}
 								>
 									<div className={classes.Content}>
 										<div className={classes.PageName}>{props.pageName}</div>

@@ -1,0 +1,27 @@
+.InfoCard {
+	border: 10px solid rgb(189 215 238 / 1);
+	border-radius: 50px;
+	display: inline-block;
+	width: 300px;
+	margin: 10px;
+}
+
+.InfoCard div {
+	padding: 10px;
+	display: flex;
+}
+
+.Image {
+	display: inline-block;
+	height: 100px;
+	border-radius: 40px;
+	margin: auto auto;
+	padding: 10px;
+}
+
+.Text {
+	display: inline-block;
+	text-align: center;
+	margin: auto auto;
+	font-weight: 700;
+}

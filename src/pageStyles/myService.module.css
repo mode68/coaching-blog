@@ -1,0 +1,19 @@
+.MyServiceImg {
+	width: 100%;
+}
+
+.PricesTable {
+	width: 100%;
+	border-spacing: 10px;
+}
+
+.Column1 {
+	background-color: rgb(189 215 238 / 1);
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+
+.Column2 {
+	border: 5px solid rgb(189 215 238 / 1);
+}

@@ -1,7 +1,29 @@
+.Article > div {
+	display: inline-block;
+	width: 100%;
+	margin-top: 50px;
+}
+
 .MainPicture {
 	float: left;
 	max-width: 39%;
 	margin: 1% 1% 1% 0;
+}
+
+.SecondaryPicture {
+	float: right;
+	align-content: space-between;
+	align-items: space-between;
+	background: rgba(0, 0, 0, 0);
+	flex: none;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: auto;
+	justify-content: flex-start;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: calc(50% - 16px);
+	max-width: calc(50% - 16px);
 }
 
 .MainPicture img {
@@ -11,6 +33,23 @@
 
 .PictureFooter {
 	font-size: x-large;
+}
+
+.Vision {
+	border-radius: 15px;
+	text-align: center;
+}
+
+.Vision > div {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	height: 380px;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0;
+	box-shadow: 0 0 8px 8px white inset;
 }
 
 .Content {
@@ -27,5 +66,13 @@
 	.Content {
 		max-width: 100%;
 		float: none;
+	}
+
+	.SecondaryPicture {
+		flex: none;
+		height: auto;
+		margin: 0px 0px 0px 0px;
+		width: 100%;
+		max-width: 100%;
 	}
 }

@@ -40,8 +40,8 @@ const Navigation = () => {
 				</Link>
 			</div>
 			<div className={classes.Link}>
-				<Link activeClassName={classes.active} to='/whatIsLifeCoaching'>
-					WHAT IS LIFE COACHING?
+				<Link activeClassName={classes.active} to='/myService'>
+					MY SERVICE
 				</Link>
 			</div>
 			<div className={classes.Link}>
