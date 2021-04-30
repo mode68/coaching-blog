@@ -5,6 +5,8 @@ export const updateObject = (oldObject, updatedProperties) => {
 	};
 };
 
+const emailRegExp = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9])\])/;
+
 export const checkValidity = (value, rules) => {
 	let isValid = true;
 
@@ -21,7 +23,7 @@ export const checkValidity = (value, rules) => {
 	}
 
 	if (rules.isEmail) {
-		const regEx = new RegExp(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
+		const regEx = new RegExp(emailRegExp);
 		isValid = regEx.test(value);
 	}
 

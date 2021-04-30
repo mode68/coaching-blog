@@ -9,7 +9,7 @@ import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
-const Reviews = () => {
+const Contact = () => {
 	const [loading, setLoading] = useState(false);
 	const [formValidity, setFormValidity] = useState(false);
 	const [error, setError] = useState('');
@@ -54,6 +54,16 @@ const Reviews = () => {
 		},
 	});
 
+	const clearContactForm = () => {
+		const updatedForm = { ...contactForm };
+
+		Object.keys(updatedForm).forEach((fieldName) => {
+			updatedForm[fieldName].value = '';
+		});
+
+		setContactForm(updatedForm);
+	};
+
 	const sendHandler = (event) => {
 		event.preventDefault();
 		if (!formValidity) {
@@ -75,6 +85,7 @@ const Reviews = () => {
 				'user_otGE6kcEHWTEHs2BDRy4G'
 			)
 			.then((response) => {
+				clearContactForm();
 				setLoading(false);
 				setEmailSentResponse('Thank you for contacting!');
 			})
@@ -131,11 +142,12 @@ const Reviews = () => {
 						title='FIRST NAME'
 						name='FirstName'
 						placeholder='Your First Name'
-						required={true}
+						required={contactForm['firstName'].required}
 						type='text'
 						touched={contactForm['firstName'].touched}
 						isValid={contactForm['firstName'].isValid}
 						errorMessage={contactForm['firstName'].errorMessage}
+						value={contactForm['firstName'].value}
 						onChange={(event) => onInputChangeHandler(event, 'firstName')}
 					/>
 					<Input
@@ -143,11 +155,12 @@ const Reviews = () => {
 						title='LAST NAME'
 						name='LastName'
 						placeholder='Your Last Name'
-						required={true}
+						required={contactForm['lastName'].required}
 						type='text'
 						touched={contactForm['lastName'].touched}
 						isValid={contactForm['lastName'].isValid}
 						errorMessage={contactForm['lastName'].errorMessage}
+						value={contactForm['lastName'].value}
 						onChange={(event) => onInputChangeHandler(event, 'lastName')}
 					/>
 				</div>
@@ -156,11 +169,12 @@ const Reviews = () => {
 						title='EMAIL'
 						name='Email'
 						placeholder='Your Email Address'
-						required={true}
+						required={contactForm['email'].required}
 						type='text'
 						touched={contactForm['email'].touched}
 						isValid={contactForm['email'].isValid}
 						errorMessage={contactForm['email'].errorMessage}
+						value={contactForm['email'].value}
 						onChange={(event) => onInputChangeHandler(event, 'email')}
 					/>
 				</div>
@@ -169,11 +183,12 @@ const Reviews = () => {
 						title='TITLE'
 						name='Title'
 						placeholder='Title'
-						required={true}
+						required={contactForm['title'].required}
 						type='text'
 						touched={contactForm['title'].touched}
 						isValid={contactForm['title'].isValid}
 						errorMessage={contactForm['title'].errorMessage}
+						value={contactForm['title'].value}
 						onChange={(event) => onInputChangeHandler(event, 'title')}
 					/>
 				</div>
@@ -183,11 +198,12 @@ const Reviews = () => {
 						title='MESSAGE'
 						name='Message'
 						placeholder='Your Message'
-						required={true}
+						required={contactForm['message'].required}
 						type='text'
 						touched={contactForm['message'].touched}
 						isValid={contactForm['message'].isValid}
 						errorMessage={contactForm['message'].errorMessage}
+						value={contactForm['message'].value}
 						onChange={(event) => onInputChangeHandler(event, 'message')}
 					/>
 				</div>
@@ -199,4 +215,4 @@ const Reviews = () => {
 	);
 };
 
-export default Reviews;
+export default Contact;

@@ -7,7 +7,7 @@
 }
 
 .InfoCard div {
-	padding: 10px;
+	padding: 0 10px 0 0;
 	display: flex;
 }
 
@@ -16,7 +16,7 @@
 	height: 100px;
 	border-radius: 40px;
 	margin: auto auto;
-	padding: 10px;
+	padding: 10px 0 10px 10px;
 }
 
 .Text {
@@ -24,4 +24,5 @@
 	text-align: center;
 	margin: auto auto;
 	font-weight: 700;
+	white-space: pre-wrap;
 }

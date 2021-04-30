@@ -5,9 +5,6 @@ import InfoCard from '../components/InfoCard/InfoCard';
 import MyServicePicture from '../images/InfoCard/my_service.jpg';
 
 const myService = () => {
-	const infoCardText1 = '好きなことや やりたいことに 気付く';
-	const infoCardText2 = '挑戦したいことへ 一歩踏み出すアクション を明確化できる';
-	const infoCardText3 = '「自分の好き」を 仕事にするためのアクションを実行に移せる';
 	return (
 		<Layout pageName='WHAT IS LIFE COACHING?'>
 			<article>
@@ -18,9 +15,9 @@ const myService = () => {
 					クライアントさんの内側にある価値観をもとに、クライアントさん自身で選択し目標を設定していただくため、自発的で継続的な変化と成長を導くことが特徴です。
 				</p>
 				<div style={{ textAlign: 'center' }}>
-					<InfoCard heartGlass text={infoCardText1} />
-					<InfoCard medal text={infoCardText2} />
-					<InfoCard peace text={infoCardText3} />
+					<InfoCard heartGlass text={'好きなことや\n やりたいことに\n 気付く'} />
+					<InfoCard medal text={'挑戦したいことへ\n 歩踏み出すアクション\n を明確化できる'} />
+					<InfoCard peace text={'「自分の好き」を 仕事にするためのアクションを実行に移せる'} />
 				</div>
 				<div style={{ marginTop: '100px' }}>
 					<img className={classes.MyServiceImg} alt='My Service' src={MyServicePicture} />
@@ -37,7 +34,7 @@ const myService = () => {
 								<td className={classes.Column2}>
 									<ul>
 										<li>
-											<b>60 分 2,000 円 (学生割 60 分 1500 円)</b>
+											<b>60 分 3,000 円 (学生割 60 分 2000 円)</b>
 										</li>
 										<li>初めて私のコーチングを受ける方を対象</li>
 										<li>

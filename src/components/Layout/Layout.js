@@ -5,7 +5,6 @@ import Navigation from '../UI/Navigation/Navigation';
 import * as classes from './Layout.module.css';
 import PageTransition from 'gatsby-plugin-page-transitions';
 import favicon from '../../images/favicon.ico';
-import '@fontsource/mukta';
 
 const Layout = (props) => {
 	return (

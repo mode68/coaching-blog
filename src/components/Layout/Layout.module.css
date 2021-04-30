@@ -1,8 +1,12 @@
 .Layout {
-	font-family: 'Mukta';
+	font-family: 'Noto Serif JP';
 	height: 15%;
 	/* background-color: white; */
 	/* position: fixed; */
+}
+
+.Layout h1 {
+	font-family: 'Mukta';
 }
 
 .Content {
@@ -10,6 +14,7 @@
 }
 
 .PageName {
+	font-family: 'Mukta';
 	margin: 5% 0 0 0;
 	font-size: 25px;
 	font-weight: bold;

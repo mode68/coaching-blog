@@ -19,6 +19,7 @@ const Input = (props) => {
 					placeholder={props.placeholder}
 					required={props.required}
 					type={props.type}
+					value={props.value}
 					onChange={props.onChange}
 				/>
 			) : (
@@ -28,6 +29,7 @@ const Input = (props) => {
 					placeholder={props.placeholder}
 					required={props.required}
 					type={props.type}
+					value={props.value}
 					onChange={props.onChange}
 				/>
 			)}
