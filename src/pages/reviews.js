@@ -17,9 +17,9 @@ const reviews = () => {
 
 	return (
 		<Layout pageName='REVIEWS'>
-			<p>
-				Do you have any doubts whether this service is for you? Please go ahead and read these reviews to help
-				you decide.
+			<p style={{ marginBottom: '50px' }}>
+				主に 20・30
+				代の方中心にコーチングを実施しております。一部ですが、今までに頂いた感想・レビューコメントをご覧下さい。
 			</p>
 			{reviews}
 		</Layout>

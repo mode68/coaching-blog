@@ -41,6 +41,13 @@ const Layout = (props) => {
 										<div className={classes.PageName}>{props.pageName}</div>
 										{props.children}
 									</div>
+									<footer>
+										<div>
+											Icons made by <a href='https://www.flaticon.com/authors/turkkub'>turkkub</a>{' '}
+											and <a href='https://www.flaticon.com/authors/iconixar'>iconixar</a> from{' '}
+											<a href='https://www.flaticon.com'>www.flaticon.com</a>
+										</div>
+									</footer>
 								</PageTransition>
 							</main>
 						</div>

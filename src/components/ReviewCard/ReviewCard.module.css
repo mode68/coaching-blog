@@ -2,13 +2,16 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 20px;
 	margin-bottom: 15px;
+	display: flex;
+	padding: 10px;
 }
 
 .ReviewPicture {
 	height: auto;
 	width: 10%;
 	display: inline-block;
-	margin: 15px 15px 0 15px;
+	margin: 0 15px 0 15px;
+	min-width: 80px;
 }
 
 .ReviewTitle {
@@ -24,12 +27,34 @@
 	vertical-align: top;
 }
 
+.DesktopOnly {
+	display: inline-block;
+}
+
+.MobileOnly {
+	display: none;
+}
+
 @media (max-width: 600px) {
+	.ReviewCard {
+		display: inline-block;
+	}
+
 	.Review {
-		width: 75%;
+		width: 100%;
 		margin: 5px 0 5px 0;
 	}
+
 	.ReviewTitle {
 		width: 100%;
+		margin: auto 0;
+	}
+
+	.DesktopOnly {
+		display: none;
+	}
+
+	.MobileOnly {
+		display: flex;
 	}
 }

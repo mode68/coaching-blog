@@ -1,11 +1,11 @@
 import React from 'react';
-import HeartGlassPicture from '../../images/InfoCard/magnifying_glass_heart.jpg';
-import PeacePicture from '../../images/InfoCard/peace.jpg';
-import MedalPicture from '../../images/InfoCard/medal.jpg';
+import ReachStar from '../../images/InfoCard/climbingStar.svg';
+import FireworksPicture from '../../images/InfoCard/fireworks.svg';
+import ReachMountainTop from '../../images/InfoCard/climbingMountain.svg';
 import * as classes from './InfoCard.module.css';
 
-const InfoCard = ({ heartGlass, medal, peace, text }) => {
-	const picture = heartGlass ? HeartGlassPicture : medal ? MedalPicture : peace ? PeacePicture : null;
+const InfoCard = ({ reachStar, reachMountainTop, fireworks, text }) => {
+	const picture = reachStar ? ReachStar : reachMountainTop ? ReachMountainTop : fireworks ? FireworksPicture : null;
 	return (
 		<div className={classes.InfoCard}>
 			<div>

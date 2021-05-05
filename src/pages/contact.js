@@ -134,25 +134,25 @@ const Contact = () => {
 				</p>
 				<p style={{ textAlign: 'center', fontSize: '22px' }}>{emailSentResponse}</p>
 			</Modal>
-			<p>For more inquiries or information, please contact me through social media or here, via email.</p>
+			<p>
+				各セクションのお申し込みやご質問などは、以下 LINE
+				を友達登録頂きご連絡いただくか、サイト内のお問い合わせフォームからご連絡下さ い。
+			</p>
+			<div>
+				<a href='https://lin.ee/m7DdXR9'>
+					<img
+						height='36'
+						border='0'
+						src='https://scdn.line-apps.com/n/line_add_friends/btn/ja.png'
+						alt='LINE link'
+					/>
+				</a>
+			</div>
 			<form>
 				<div>
 					<Input
 						nameRowElement
-						title='FIRST NAME'
-						name='FirstName'
-						placeholder='Your First Name'
-						required={contactForm['firstName'].required}
-						type='text'
-						touched={contactForm['firstName'].touched}
-						isValid={contactForm['firstName'].isValid}
-						errorMessage={contactForm['firstName'].errorMessage}
-						value={contactForm['firstName'].value}
-						onChange={(event) => onInputChangeHandler(event, 'firstName')}
-					/>
-					<Input
-						nameRowElement
-						title='LAST NAME'
+						title='LAST NAME / 姓'
 						name='LastName'
 						placeholder='Your Last Name'
 						required={contactForm['lastName'].required}
@@ -163,10 +163,23 @@ const Contact = () => {
 						value={contactForm['lastName'].value}
 						onChange={(event) => onInputChangeHandler(event, 'lastName')}
 					/>
+					<Input
+						nameRowElement
+						title='FIRST NAME / 名'
+						name='FirstName'
+						placeholder='Your First Name'
+						required={contactForm['firstName'].required}
+						type='text'
+						touched={contactForm['firstName'].touched}
+						isValid={contactForm['firstName'].isValid}
+						errorMessage={contactForm['firstName'].errorMessage}
+						value={contactForm['firstName'].value}
+						onChange={(event) => onInputChangeHandler(event, 'firstName')}
+					/>
 				</div>
 				<div>
 					<Input
-						title='EMAIL'
+						title='EMAIL / メールアドレス'
 						name='Email'
 						placeholder='Your Email Address'
 						required={contactForm['email'].required}
@@ -180,7 +193,7 @@ const Contact = () => {
 				</div>
 				<div>
 					<Input
-						title='TITLE'
+						title='TITLE / 件名'
 						name='Title'
 						placeholder='Title'
 						required={contactForm['title'].required}
@@ -195,7 +208,7 @@ const Contact = () => {
 				<div>
 					<Input
 						textarea
-						title='MESSAGE'
+						title='MESSAGE / メッセージ'
 						name='Message'
 						placeholder='Your Message'
 						required={contactForm['message'].required}

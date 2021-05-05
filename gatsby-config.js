@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: 'Nano Coaching',
+		title: 'CoacHirano',
 	},
 	plugins: [
 		{
@@ -22,7 +22,11 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Noto Serif JP\:200,300,400,500,600,700`, `Mukta\:200,300,400,500,600,700`],
+				fonts: [
+					`Noto Serif JP\:200,300,400,500,600,700`,
+					`Mukta\:200,300,400,500,600,700`,
+					`Kaushan Script\:200,300,400,500,600,700`,
+				],
 				display: 'swap',
 			},
 		},

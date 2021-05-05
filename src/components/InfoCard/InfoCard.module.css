@@ -1,6 +1,6 @@
 .InfoCard {
-	border: 10px solid rgb(189 215 238 / 1);
-	border-radius: 50px;
+	border: 8px solid rgb(189 215 238 / 1);
+	border-radius: 30px;
 	display: inline-block;
 	width: 300px;
 	margin: 10px;
@@ -25,4 +25,10 @@
 	margin: auto auto;
 	font-weight: 700;
 	white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 500px) {
+	.InfoCard {
+		width: auto;
+	}
 }

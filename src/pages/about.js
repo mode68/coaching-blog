@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import mainPicture from '../images/nano_about.jpg';
 import secondaryPicture from '../images/nano_about_2.jpg';
-import visionPicture from '../images/flowers_vision_about.jpg';
+import visionPicture from '../images/about_vision.jpg';
 import * as classes from '../pageStyles/about.module.css';
 import InfoCard from '../components/InfoCard/InfoCard';
 
@@ -45,8 +45,15 @@ const about = () => (
 			</div>
 			<div className={classes.Vision}>
 				<div style={{ backgroundImage: `url(${visionPicture})` }}>
-					<div style={{ marginTop: '80px', display: 'inline-block' }}>
-						<h2 style={{ margin: 0 }}>Vision</h2>
+					<div
+						style={{
+							marginTop: '80px',
+							display: 'inline-block',
+							border: 'solid 1px white',
+							padding: '5%',
+							color: 'white',
+						}}
+					>
 						<div style={{ margin: 0 }}>
 							「出来ることも、出来ないこともある自分自身」
 							<br />
@@ -63,9 +70,9 @@ const about = () => (
 				そのためのサポートとして、コーチングを以下の方へ提供しています。
 				<br /> 詳細はメニューの”MY SERVICE”をご覧下さい。
 				<div style={{ textAlign: 'center' }}>
-					<InfoCard heartGlass text={'好きなことや\nやりたいことが\n見つからない'} />
-					<InfoCard medal text={'挑戦したいことが\nあるけど、\n 一歩踏み出せない'} />
-					<InfoCard peace text={'自分の好き」を 仕事にしたい '} />
+					<InfoCard reachStar text={'好きなことや\nやりたいことが\n見つからない'} />
+					<InfoCard reachMountainTop text={'挑戦したいことが\nあるけど、\n 一歩踏み出せない'} />
+					<InfoCard fireworks text={'「自分の好き」を 仕事にしたい '} />
 				</div>
 				自分が心から望む、「本当にやりたい事」を見つけ一歩踏み出すことで、人生を変化させませんか？
 			</div>
@@ -93,6 +100,7 @@ const about = () => (
 				</ul>
 				学生時代にオーストラリアへ留学をしたことをきっかけに、「自分オリジナルな人生
 				を楽しむ」人たちに沢山出会いました。
+				<br />
 				<br />
 				みんなが考える「良い人生レール」を歩まずに、「オリジナルな人生レール」を歩む
 				人たちは、本当にイキイキとしていました。

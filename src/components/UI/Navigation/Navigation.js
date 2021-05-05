@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import * as classes from './Navigation.module.css';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYoutube, faFacebook, faInstagram, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faLine, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faStickyNote } from '@fortawesome/free-regular-svg-icons';
 import { animated, useTransition } from 'react-spring';
 
-const Navigation = () => {
+const Navigation = ({ removeStyling }) => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const transition = useTransition(showMobileMenu, {
 		from: { opacity: 0 },
@@ -17,17 +18,17 @@ const Navigation = () => {
 
 	const socialMediaLinksElement = (
 		<div className={classes.SocialMediaLinks}>
-			<a href='https://www.youtube.com'>
-				<FontAwesomeIcon icon={faYoutube} />
+			<a href='https://note.com/nanatravel_7'>
+				<FontAwesomeIcon style={{ transform: 'rotate(180deg)' }} icon={faStickyNote} />
 			</a>
-			<a href='https://www.twitter.com'>
+			<a href='https://twitter.com/Nanacoooo775'>
 				<FontAwesomeIcon icon={faTwitterSquare} />
 			</a>
-			<a href='https://www.facebook.com'>
+			<a href='https://www.facebook.com/nanako.hirano.16'>
 				<FontAwesomeIcon icon={faFacebook} />
 			</a>
-			<a href='https://www.instagram.com'>
-				<FontAwesomeIcon icon={faInstagram} />
+			<a href='https://lin.ee/m7DdXR9'>
+				<FontAwesomeIcon icon={faLine} />
 			</a>
 		</div>
 	);
@@ -61,7 +62,12 @@ const Navigation = () => {
 		setShowMobileMenu(!showMobileMenu);
 	};
 
-	return (
+	return removeStyling ? (
+		<div>
+			{menuLinksElement}
+			{socialMediaLinksElement}
+		</div>
+	) : (
 		<div className={classes.RootNavigation}>
 			{transition((style, show) => {
 				return (

@@ -18,3 +18,30 @@
 .Column2 {
 	border: 5px solid rgb(189 215 238 / 1);
 }
+
+.DesktopOnly {
+	display: inline-block;
+}
+
+.MobileOnly {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.DesktopOnly {
+		display: none;
+	}
+
+	.MobileOnly {
+		display: inline-block;
+	}
+
+	.PricesTable {
+		border-spacing: 5px;
+		margin-top: 15px;
+	}
+
+	.Column1 {
+		height: 60px;
+	}
+}

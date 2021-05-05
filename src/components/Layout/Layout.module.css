@@ -21,6 +21,27 @@
 	letter-spacing: 5px;
 }
 
+footer {
+	display: flex;
+	border-top: solid 1px rgba(0, 0, 0, 0.3);
+	font-size: 12px;
+}
+
+footer > div {
+	margin: auto;
+	text-align: center;
+}
+
+footer > div > a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #8c8c8c;
+}
+
+footer > div > a:active {
+	color: #8c8c8c;
+}
+
 @media (max-width: 1000px) {
 	.Content {
 		margin: 15% 1% 1% 1%;
