@@ -3,8 +3,8 @@ import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Navigation from '../UI/Navigation/Navigation';
 import * as classes from './Layout.module.css';
-import PageTransition from 'gatsby-plugin-page-transitions';
 import favicon from '../../images/favicon.ico';
+import { motion } from 'framer-motion';
 
 const Layout = (props) => {
 	return (
@@ -28,14 +28,25 @@ const Layout = (props) => {
 						<div className={classes.Layout}>
 							<Navigation />
 							<main>
-								<PageTransition
-									transitionStyles={{
-										entering: { opacity: '0' },
-										entered: { opacity: '1' },
-										exiting: { opacity: '1' },
-										exited: { opacity: '0' },
+								<motion.div
+									initial={{
+										opacity: 0,
+										x: -200,
 									}}
-									transitionTime={1000}
+									animate={{
+										opacity: 1,
+										x: 0,
+									}}
+									exit={{
+										opacity: 0,
+										x: 200,
+									}}
+									transition={{
+										type: 'spring',
+										mass: 0.35,
+										stiffness: 75,
+										duration: 0.3,
+									}}
 								>
 									<div className={classes.Content}>
 										<div className={classes.PageName}>{props.pageName}</div>
@@ -48,7 +59,7 @@ const Layout = (props) => {
 											<a href='https://www.flaticon.com'>www.flaticon.com</a>
 										</div>
 									</footer>
-								</PageTransition>
+								</motion.div>
 							</main>
 						</div>
 					</>

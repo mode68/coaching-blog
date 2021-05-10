@@ -8,6 +8,8 @@ import { updateObject, checkValidity } from '../shared/utility';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+import { IntersectionObserver } from '../components/UI/IntersectionObserver/IntersectionObserver';
+import { AnimationContainer } from '../components/UI/Animation/AnimationContainer';
 
 const Contact = () => {
 	const [loading, setLoading] = useState(false);
@@ -149,80 +151,84 @@ const Contact = () => {
 				</a>
 			</div>
 			<form>
-				<div>
-					<Input
-						nameRowElement
-						title='LAST NAME / 姓'
-						name='LastName'
-						placeholder='Your Last Name'
-						required={contactForm['lastName'].required}
-						type='text'
-						touched={contactForm['lastName'].touched}
-						isValid={contactForm['lastName'].isValid}
-						errorMessage={contactForm['lastName'].errorMessage}
-						value={contactForm['lastName'].value}
-						onChange={(event) => onInputChangeHandler(event, 'lastName')}
-					/>
-					<Input
-						nameRowElement
-						title='FIRST NAME / 名'
-						name='FirstName'
-						placeholder='Your First Name'
-						required={contactForm['firstName'].required}
-						type='text'
-						touched={contactForm['firstName'].touched}
-						isValid={contactForm['firstName'].isValid}
-						errorMessage={contactForm['firstName'].errorMessage}
-						value={contactForm['firstName'].value}
-						onChange={(event) => onInputChangeHandler(event, 'firstName')}
-					/>
-				</div>
-				<div>
-					<Input
-						title='EMAIL / メールアドレス'
-						name='Email'
-						placeholder='Your Email Address'
-						required={contactForm['email'].required}
-						type='text'
-						touched={contactForm['email'].touched}
-						isValid={contactForm['email'].isValid}
-						errorMessage={contactForm['email'].errorMessage}
-						value={contactForm['email'].value}
-						onChange={(event) => onInputChangeHandler(event, 'email')}
-					/>
-				</div>
-				<div>
-					<Input
-						title='TITLE / 件名'
-						name='Title'
-						placeholder='Title'
-						required={contactForm['title'].required}
-						type='text'
-						touched={contactForm['title'].touched}
-						isValid={contactForm['title'].isValid}
-						errorMessage={contactForm['title'].errorMessage}
-						value={contactForm['title'].value}
-						onChange={(event) => onInputChangeHandler(event, 'title')}
-					/>
-				</div>
-				<div>
-					<Input
-						textarea
-						title='MESSAGE / メッセージ'
-						name='Message'
-						placeholder='Your Message'
-						required={contactForm['message'].required}
-						type='text'
-						touched={contactForm['message'].touched}
-						isValid={contactForm['message'].isValid}
-						errorMessage={contactForm['message'].errorMessage}
-						value={contactForm['message'].value}
-						onChange={(event) => onInputChangeHandler(event, 'message')}
-					/>
-				</div>
-				<button className={classes.SendButton} onClick={sendHandler}>
-					<p>SEND</p>
-				</button>
+				<IntersectionObserver triggerOnce threshold={0.3}>
+					<AnimationContainer slideInFromLeft staggerChildren={0.5}>
+						<div>
+							<Input
+								nameRowElement
+								title='LAST NAME / 姓'
+								name='LastName'
+								placeholder='Your Last Name'
+								required={contactForm['lastName'].required}
+								type='text'
+								touched={contactForm['lastName'].touched}
+								isValid={contactForm['lastName'].isValid}
+								errorMessage={contactForm['lastName'].errorMessage}
+								value={contactForm['lastName'].value}
+								onChange={(event) => onInputChangeHandler(event, 'lastName')}
+							/>
+							<Input
+								nameRowElement
+								title='FIRST NAME / 名'
+								name='FirstName'
+								placeholder='Your First Name'
+								required={contactForm['firstName'].required}
+								type='text'
+								touched={contactForm['firstName'].touched}
+								isValid={contactForm['firstName'].isValid}
+								errorMessage={contactForm['firstName'].errorMessage}
+								value={contactForm['firstName'].value}
+								onChange={(event) => onInputChangeHandler(event, 'firstName')}
+							/>
+						</div>
+						<div>
+							<Input
+								title='EMAIL / メールアドレス'
+								name='Email'
+								placeholder='Your Email Address'
+								required={contactForm['email'].required}
+								type='text'
+								touched={contactForm['email'].touched}
+								isValid={contactForm['email'].isValid}
+								errorMessage={contactForm['email'].errorMessage}
+								value={contactForm['email'].value}
+								onChange={(event) => onInputChangeHandler(event, 'email')}
+							/>
+						</div>
+						<div>
+							<Input
+								title='TITLE / 件名'
+								name='Title'
+								placeholder='Title'
+								required={contactForm['title'].required}
+								type='text'
+								touched={contactForm['title'].touched}
+								isValid={contactForm['title'].isValid}
+								errorMessage={contactForm['title'].errorMessage}
+								value={contactForm['title'].value}
+								onChange={(event) => onInputChangeHandler(event, 'title')}
+							/>
+						</div>
+						<div>
+							<Input
+								textarea
+								title='MESSAGE / メッセージ'
+								name='Message'
+								placeholder='Your Message'
+								required={contactForm['message'].required}
+								type='text'
+								touched={contactForm['message'].touched}
+								isValid={contactForm['message'].isValid}
+								errorMessage={contactForm['message'].errorMessage}
+								value={contactForm['message'].value}
+								onChange={(event) => onInputChangeHandler(event, 'message')}
+							/>
+						</div>
+						<button className={classes.SendButton} onClick={sendHandler}>
+							<p>SEND</p>
+						</button>
+					</AnimationContainer>
+				</IntersectionObserver>
 			</form>
 		</Layout>
 	);

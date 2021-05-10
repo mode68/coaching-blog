@@ -2,19 +2,27 @@ import * as React from 'react';
 import Navigation from '../components/UI/Navigation/Navigation';
 import image from '../images/home_page2.jpg';
 import * as classes from '../pageStyles/index.module.css';
-import PageTransition from 'gatsby-plugin-page-transitions';
+import { motion } from 'framer-motion';
 
 // markup
 const IndexPage = () => {
 	return (
-		<PageTransition
-			transitionStyles={{
-				entering: { opacity: '0' },
-				entered: { opacity: '1' },
-				exiting: { opacity: '1' },
-				exited: { opacity: '0' },
+		<motion.div
+			initial={{
+				opacity: 0,
 			}}
-			transitionTime={1000}
+			animate={{
+				opacity: 1,
+			}}
+			exit={{
+				opacity: 0,
+			}}
+			transition={{
+				type: 'spring',
+				mass: 0.35,
+				stiffness: 75,
+				duration: 100,
+			}}
 		>
 			<div className={classes.Home}>
 				<div style={{ backgroundImage: `url(${image})` }}>
@@ -38,7 +46,7 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</div>
-		</PageTransition>
+		</motion.div>
 	);
 };
 

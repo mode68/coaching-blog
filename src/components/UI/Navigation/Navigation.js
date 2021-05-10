@@ -86,7 +86,7 @@ const Navigation = ({ removeStyling }) => {
 				{menuLinksElement}
 			</div>
 			<div className={classes.SideNavigationButton}>
-				<div className={classes.Title}>CoacHirano</div>
+				<div className={classes.Title}>Nanakoach</div>
 				<div className={classes.Button} onClick={mobileMenuClickHandler}>
 					<FontAwesomeIcon icon={faBars} />
 				</div>

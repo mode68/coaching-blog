@@ -2,6 +2,16 @@
 	width: 100%;
 }
 
+.CheckmarkList {
+	list-style: none;
+}
+
+.CheckmarkList > li:before {
+	content: '✓';
+	margin-right: 15px;
+	color: green;
+}
+
 .PricesTable {
 	width: 100%;
 	border-spacing: 10px;
